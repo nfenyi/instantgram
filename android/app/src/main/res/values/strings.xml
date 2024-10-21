@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">991834422075413</string>
+    <string name="fb_login_protocol_scheme">991834422075413</string>
+    <string name="facebook_client_token">a822dfcea38997d9ad7c1518e60d9e6d</string>    
+    <string name="app_name">Vandads Course</string>    
+</resources>

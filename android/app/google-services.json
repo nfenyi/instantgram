@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "833711512388",
+    "project_id": "fenyi-ig-clone",
+    "storage_bucket": "fenyi-ig-clone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833711512388:android:304fe080fcbf0ecafb9511",
+        "android_client_info": {
+          "package_name": "com.example.instant_gram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBeGK68-ur0yA3NkU-sTBAUK9mq8A7gAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833711512388:android:a0e6861bc890ccbcfb9511",
+        "android_client_info": {
+          "package_name": "com.example.instantgram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBeGK68-ur0yA3NkU-sTBAUK9mq8A7gAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
