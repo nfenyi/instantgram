@@ -2,6 +2,38 @@
     <queries>
         <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
     </queries>
+
+     <!-- Permissions options for the `contacts` group -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!-- Permissions options for the `storage` group -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- Read storage permission for Android 12 and lower -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--
+      Granular media permissions for Android 13 and newer.
+      See https://developer.android.com/about/versions/13/behavior-changes-13#granular-media-permissions
+      for more information.
+    -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <!-- Permissions options for the `camera` group -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- Permissions options for the `location` group -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+     <!-- Permissions options for the `microphone` or `speech` group -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Permissions options for the `notification` group -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     
     <application
         android:label="instantgram"
@@ -57,6 +89,8 @@
         <meta-data 
         android:name="com.facebook.sdk.ClientToken" 
         android:value="@string/facebook_client_token"/>
+
+
     </application>
 
     

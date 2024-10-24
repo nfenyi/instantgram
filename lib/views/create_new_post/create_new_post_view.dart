@@ -9,7 +9,7 @@ import 'package:instantgram/state/image_upload/models/thumbnail_request.dart';
 import 'package:instantgram/state/image_upload/providers/image_upload_provider.dart';
 import 'package:instantgram/state/post_settings/models/post_setting.dart';
 import 'package:instantgram/state/post_settings/providers/post_setting_provider.dart';
-import 'package:instantgram/views/components/file_thumbnail_view.dart';
+import 'package:instantgram/views/widgets/file_thumbnail_view.dart';
 import 'package:instantgram/views/constants/strings.dart';
 
 class CreateNewPostView extends StatefulHookConsumerWidget {

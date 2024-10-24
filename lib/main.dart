@@ -1,12 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instantgram/firebase_options.dart';
+import 'package:instantgram/home/home_screen.dart';
 import 'package:instantgram/state/auth/models/auth_result.dart';
 import 'package:instantgram/state/auth/notifiers/providers/auth_state_provider.dart';
 import 'package:instantgram/state/providers/is_loading_provider.dart';
 
-import 'package:instantgram/views/components/loading/loading_screen.dart';
+import 'package:instantgram/views/widgets/loading/loading_screen.dart';
 import 'package:instantgram/views/login/login_view.dart';
 import 'package:instantgram/views/main/main_view.dart';
 
@@ -24,30 +26,40 @@ class App extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
-        title: 'Flutter App',
-        darkTheme: ThemeData.dark(),
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter App',
+      darkTheme: ThemeData.dark(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: GoogleFonts.manrope(fontSize: 13).fontFamily,
+        scrollbarTheme: ScrollbarThemeData(
+          crossAxisMargin: 5,
+          // thickness: 5,
+          thumbColor: WidgetStateProperty.all(Colors.grey[400]),
+          radius: const Radius.circular(10),
         ),
-        home: Consumer(builder: (context, ref, child) {
-          //take care of displaying the loading screen
-          ref.listen<bool>(isLoadingProvider, (_, isLoading) {
-            if (isLoading) {
-              LoadingScreen.instance().show(context: context);
-            } else {
-              LoadingScreen.instance().hide();
-            }
-          });
-          final isLoggedIn =
-              ref.watch(authStateProvider).result == AuthResult.success;
-          if (isLoggedIn) {
-            return const MainView();
-          } else {
-            return const LoginView();
-          }
-        })
-        //const MainView(),
-        );
+      ),
+      home: HomeScreen(),
+      // home:
+      // Consumer(builder: (context, ref, child) {
+      //   //take care of displaying the loading screen
+      //   ref.listen<bool>(isLoadingProvider, (_, isLoading) {
+      //     if (isLoading) {
+      //       LoadingScreen.instance().show(context: context);
+      //     } else {
+      //       LoadingScreen.instance().hide();
+      //     }
+      //   });
+      //   final isLoggedIn =
+      //       ref.watch(authStateProvider).result == AuthResult.success;
+      //   if (isLoggedIn) {
+      //     return const MainView();
+      //   } else {
+      //     return const LoginView();
+      //   }
+      // })
+      // //const MainView(),
+    );
   }
 }
 

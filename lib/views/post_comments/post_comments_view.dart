@@ -5,14 +5,14 @@ import 'package:instantgram/state/auth/notifiers/providers/user_id_provider.dart
 import 'package:instantgram/state/comments/models/post_comment_request.dart';
 import 'package:instantgram/state/comments/providers/post_comments_provider.dart';
 import 'package:instantgram/state/posts/typedefs/post_id.dart';
-import 'package:instantgram/views/components/animations/empty_contents_with_text_animation_view.dart';
-import 'package:instantgram/views/components/animations/error_animation_view.dart';
-import 'package:instantgram/views/components/animations/loading_animation_view.dart';
+import 'package:instantgram/views/widgets/animations/empty_contents_with_text_animation_view.dart';
+import 'package:instantgram/views/widgets/animations/error_animation_view.dart';
+import 'package:instantgram/views/widgets/animations/loading_animation_view.dart';
 import 'package:instantgram/views/constants/strings.dart';
 import 'package:instantgram/views/extensions/dismiss_keyboard.dart';
 
 import '../../state/comments/providers/send_comment_provider.dart';
-import '../components/comment/comment_tile.dart';
+import '../widgets/comment/comment_tile.dart';
 
 class PostCommentsView extends HookConsumerWidget {
   final PostId postId;

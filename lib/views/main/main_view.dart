@@ -5,8 +5,8 @@ import 'package:instantgram/state/auth/notifiers/providers/auth_state_provider.d
 import 'package:instantgram/state/image_upload/helpers/image_picker_helper.dart';
 import 'package:instantgram/state/image_upload/models/file_type.dart';
 import 'package:instantgram/state/post_settings/providers/post_setting_provider.dart';
-import 'package:instantgram/views/components/dialogs/alert_dialog_model.dart';
-import 'package:instantgram/views/components/dialogs/logout_dialog.dart';
+import 'package:instantgram/views/widgets/dialogs/alert_dialog_model.dart';
+import 'package:instantgram/views/widgets/dialogs/logout_dialog.dart';
 import 'package:instantgram/views/constants/strings.dart';
 import 'package:instantgram/views/create_new_post/create_new_post_view.dart';
 import 'package:instantgram/views/tabs/home/home_view.dart';
@@ -42,9 +42,12 @@ class _MainViewState extends ConsumerState<MainView> {
                   if (!mounted) {
                     return;
                   }
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return CreateNewPostView(videoFile, FileType.video);
-                  }));
+                  if (mounted) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return CreateNewPostView(videoFile, FileType.video);
+                    }));
+                  }
                 },
                 icon: const FaIcon(FontAwesomeIcons.film)),
             IconButton(
